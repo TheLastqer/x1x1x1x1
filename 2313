@@ -3,7 +3,7 @@
 	
 	local Tab = Window:NewSection("Credits: FxZ Hub")
 
-	Tab:CreateToggle("Inf Fish", function(no)
+	Tab:CreateToggle("AUTO KILL ALL", function(no)
 	_G.GetWins = no
 	while _G.GetWins== true do
 		wait() 
