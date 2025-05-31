@@ -1,0 +1,30 @@
+
+local replicated_storage = game:GetService("ReplicatedStorage")
+local workspace = game:GetService("Workspace")
+
+local skin_walkers = workspace:WaitForChild("Runners"):WaitForChild("Skinwalkers")
+local night_walkers = workspace:WaitForChild("Nightwalkers")
+
+getgenv().enable = true
+
+if enable then
+    repeat
+        if #skin_walkers:GetChildren() > 0 then
+            for _, v in next, skin_walkers:GetChildren() do
+                if v:FindFirstChild("Head") then
+                    replicated_storage:WaitForChild("Remotes"):WaitForChild("SniperShot"):FireServer(v:GetPivot().Position, v:GetPivot().Position, v.Head)
+                    task.wait(.1)
+                end
+            end
+        end
+        if #night_walkers:GetChildren() > 0 then
+            for _, v in next, night_walkers:GetChildren() do
+                if v:FindFirstChild("Head") then
+                    replicated_storage:WaitForChild("Remotes"):WaitForChild("SniperShot"):FireServer(v:GetPivot().Position, v:GetPivot().Position, v.Head)
+                    task.wait(.1)
+                end
+            end
+        end
+        task.wait()
+    until not enable
+end
