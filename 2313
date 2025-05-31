@@ -1,0 +1,23 @@
+	local Library = loadstring(Game:HttpGet("https://raw.githubusercontent.com/bloodball/-back-ups-for-libs/main/wizard"))()
+	local Window = Library:NewWindow("Script")
+	
+	local Tab = Window:NewSection("Credits: FxZ Hub")
+
+	Tab:CreateToggle("Inf Fish", function(no)
+	_G.GetWins = no
+	while _G.GetWins== true do
+		wait() 
+
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/TheLastqer/x1x1x1x1/refs/heads/main/22'))()
+	end
+	end)
+
+	local Tab = Window:NewSection("Links")
+	
+	Tab:CreateButton("Discord Group", function()
+	print("HI")
+	
+	setclipboard("https://discord.gg/f9CEfBPJ")
+	toclipboard("https://discord.gg/f9CEfBPJ")
+	
+	end)
